@@ -25,9 +25,9 @@ void loop() {
   if(Serial.available() > 0){
     int x = Serial.parseInt();
     int y = Serial.parseInt();
-    switch
+    
     // These next if statements are purposefully left with no condition for the purpose of being filled in.
-    if(){ // straight forward
+    if(x == 0 && y == 1){ // straight forward
       motorSpeed(128, 128, 128, 128);
     }
     if(){ // straight backwards
