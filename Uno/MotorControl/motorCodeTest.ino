@@ -27,45 +27,45 @@ void loop() {
     int y = Serial.parseInt();
     
     // These next if statements are purposefully left with no condition for the purpose of being filled in.
-    if(x == 0 && y == 1){ // straight forward
+    if( (-45 < x && x < 45) && (y > 45) ){ // straight forward
       motorSpeed(128, 128, 128, 128);
     }
-    if(){ // straight backwards
+    if( (-45 < x && x < 45) && (y < -45) ){ // straight backwards
       motorSpeed(-128, -128, -128, -128);
     }
-    if(){ // sideways right
+    if( (x > 45) && (-45 < y && y < 45) ){ // sideways right
       motorSpeed(128, -128, -128, 128);
     }
-    if(){ // sideways left
+    if( (x < -45) && (-45 < y && y < 45) ){ // sideways left
       motorSpeed(-128, 128, 128, -128);
     }
-    if(){ // diagonal right
-      motorSpeed(128, 0, 0, 128);
-    }
-    if(){ // diagonal left
-      motorSpeed(0, 128, 128, 0);
-    }
-    if(){ // diagonal back-right 
-      motorSpeed(-128, 0, 0, -128);
-    }
-    if(){ // diagonal back-left 
-      motorSpeed(0, -128, -128, 0);
-    }
-    if(){ // concerning right
-      motorSpeed(128, 0, 128, 0);
-    } 
-    if(){ // concerning left
-      motorSpeed(0, 128, 0, 128);
-    } 
-    if(){ // turn around right
-      motorSpeed(128, -128, 128, -128);
-    } 
-    if(){ // turn around left
-      motorSpeed(-128, 128, -128, 128);
-    } 
-    if(){ // stop
-      motorSpeed(0, 0, 0, 0);
-    }
+//    if(){ // diagonal right
+//      motorSpeed(128, 0, 0, 128);
+//    }
+//    if(){ // diagonal left
+//      motorSpeed(0, 128, 128, 0);
+//    }
+//    if(){ // diagonal back-right 
+//      motorSpeed(-128, 0, 0, -128);
+//    }
+//    if(){ // diagonal back-left 
+//      motorSpeed(0, -128, -128, 0);
+//    }
+//    if(){ // concerning right
+//      motorSpeed(128, 0, 128, 0);
+//    } 
+//    if(){ // concerning left
+//      motorSpeed(0, 128, 0, 128);
+//    } 
+//    if(){ // turn around right
+//      motorSpeed(128, -128, 128, -128);
+//    } 
+//    if(){ // turn around left
+//      motorSpeed(-128, 128, -128, 128);
+//    } 
+//    if(){ // stop
+//      motorSpeed(0, 0, 0, 0);
+//    }
   }
 
   void motorSpeed(int motorSpeed1, int motorSpeed2, int motorSpeed3, int motorSpeed4){
