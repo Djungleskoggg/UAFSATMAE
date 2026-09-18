@@ -21,7 +21,7 @@ def main():
     arm.move_init()
     time.sleep(1)
     # Changes the X,Y,Z coordinate to match intended location
-    arm.move_to_xyz(3,-3,10)
+    arm.move_to_xyz(0, 0, 0)
 
 if __name__ == "__main__":
     main()
