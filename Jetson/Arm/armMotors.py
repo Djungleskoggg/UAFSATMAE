@@ -26,13 +26,14 @@ def main():
     while(True):
         for event in pg.event.get():
             pass
+
         x_joystick = round((pg.joystick.Joystick(0).get_axis(0)))  
-        y_joystick = round((pg.joystick.Joystick(0).get_axis(1)) * -1)
+        y_joystick = round((pg.joystick.Joystick(0).get_axis(1)))
 
         serialCon.write(f'{x_joystick* 100} {y_joystick* 100} '.encode("utf-8"))
         print(f"{x_joystick* 100} {y_joystick* 100} {x} {y} {z}")
 
-        x1_joystick = round((pg.joystick.Joystick(0).get_axis(2)) ,1)*-1  
+        x1_joystick = round((pg.joystick.Joystick(0).get_axis(2)) ,1) 
         y1_joystick = round((pg.joystick.Joystick(0).get_axis(3)) ,1)
 
         if(pg.joystick.Joystick(0).get_button(4)):
