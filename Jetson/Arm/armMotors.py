@@ -4,7 +4,7 @@ import pygame as pg
 import serial as ser
 
 pg.init() # initializing pygame so that events exist or somtin - jerick
-#serialCon = ser.Serial('/dev/ttyACM0', 9600)
+serialCon = ser.Serial('/dev/ttyACM0', 9600)
 
 pg.joystick.init()
 joysticks = [pg.joystick.Joystick(x) for x in range(pg.joystick.get_count())]
@@ -29,7 +29,7 @@ def main():
         x_joystick = round((pg.joystick.Joystick(0).get_axis(0)))  
         y_joystick = round((pg.joystick.Joystick(0).get_axis(1)) * -1)
 
-        # serialCon.write(f'{x_joystick* 100} {y_joystick* 100} '.encode("utf-8"))
+        serialCon.write(f'{x_joystick* 100} {y_joystick* 100} '.encode("utf-8"))
         print(f"{x_joystick* 100} {y_joystick* 100} {x} {y} {z}")
 
         x1_joystick = round((pg.joystick.Joystick(0).get_axis(2)) ,1)*-1  
