@@ -66,12 +66,11 @@ void loop() {
 //    if(){ // stop
 //      motorSpeed(0, 0, 0, 0);
 //    }
-  }
+}
 
-  void motorSpeed(int motorSpeed1, int motorSpeed2, int motorSpeed3, int motorSpeed4){
-    motor1.setSpeed(motorSpeed1);
-    motor2.setSpeed(motorSpeed2);
-    motor3.setSpeed(motorSpeed3);
-    motor4.setSpeed(motorSpeed4);
-  }
+void motorSpeed(int motorSpeed1, int motorSpeed2, int motorSpeed3, int motorSpeed4){
+  motor1.setSpeed(motorSpeed1);
+  motor2.setSpeed(motorSpeed2);
+  motor3.setSpeed(motorSpeed3);
+  motor4.setSpeed(motorSpeed4);
 }
