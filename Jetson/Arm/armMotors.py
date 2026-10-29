@@ -15,8 +15,9 @@ x_joystick = 0.0
 y_joystick = 0.0
 
 def main():
-    arm = m2Arm(port = "/dev/ttyUSB0")
-    arm.move_init()
+    # commented out arm code due to unconnected arm.
+    # arm = m2Arm(port = "/dev/ttyUSB0")
+    # arm.move_init()
 
     alignment = 0.0
     latch = False
@@ -65,8 +66,9 @@ def main():
         if(y1_joystick > 0.25 or y1_joystick < -0.25):
             y += y1_joystick
 
-        arm.gripper_angle_ctrl(angle_grip,10,3)
-        arm.move_to_xyz(y,x,z)
+        # arm.gripper_angle_ctrl(angle_grip,10,3)
+        # arm.move_to_xyz(y,x,z)
         clock.tick(60)
+        
 if __name__ == "__main__":
     main()
